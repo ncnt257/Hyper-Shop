@@ -1,0 +1,15 @@
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\bin\Debug\net5.0\HyperShop.DataAccess.deps.json
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\bin\Debug\net5.0\HyperShop.DataAccess.dll
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\bin\Debug\net5.0\ref\HyperShop.DataAccess.dll
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\bin\Debug\net5.0\HyperShop.DataAccess.pdb
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\HyperShop.DataAccess.csproj.AssemblyReference.cache
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\HyperShop.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\HyperShop.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\HyperShop.DataAccess.AssemblyInfo.cs
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\HyperShop.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\HyperShop.DataAccess.dll
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\ref\HyperShop.DataAccess.dll
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\HyperShop.DataAccess.pdb
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\bin\Debug\net5.0\HyperShop.Models.dll
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\bin\Debug\net5.0\HyperShop.Models.pdb
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop.DataAccess\obj\Debug\net5.0\HyperShop.DataAccess.csproj.CopyComplete

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "HyperShop.Models/1.0.0": {
+        "runtime": {
+          "HyperShop.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HyperShop.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
