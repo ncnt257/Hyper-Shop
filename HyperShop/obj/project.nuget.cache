@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JBNLgW+f2+iP/+FeNIDygfzPcC/3HYuXo8qFg0rBO6jL4O4Rmy3SqXnRpqGLUWSIwlNNuYg1wNf0tbakZm8nhw==",
+  "dgSpecHash": "VQoIrgSlWZIrYleXNQY7EKMlp1HLpjBeq97WWkqriADlGjJoUvt6M1lZfMjpi/8s55orxWjYWFLGf3MW4cNiGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ThinkPro\\OneDrive\\Desktop\\Hyper-Shop\\HyperShop\\HyperShop.csproj",
+  "projectFilePath": "C:\\Users\\ThinkPro\\OneDrive\\Desktop\\Hyper-Shop\\HyperShop\\HyperShop.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ThinkPro\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ThinkPro\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

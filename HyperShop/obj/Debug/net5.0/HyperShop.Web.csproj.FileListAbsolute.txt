@@ -157,3 +157,10 @@ C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\HyperSh
 C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\ref\HyperShop.Web.dll
 C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\HyperShop.Web.pdb
 C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\HyperShop.Web.genruntimeconfig.cache
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brand\Create.cshtml.g.cs
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brand\Delete.cshtml.g.cs
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brand\Details.cshtml.g.cs
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brand\Edit.cshtml.g.cs
+C:\Users\ThinkPro\OneDrive\Desktop\Hyper-Shop\HyperShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brand\Index.cshtml.g.cs

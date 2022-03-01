@@ -2016,7 +2016,9 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "HyperShop.Models": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.2"
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12"
         },
         "compile": {
           "bin/placeholder/HyperShop.DataAccess.dll": {}
@@ -7189,9 +7191,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ThinkPro\\OneDrive\\Desktop\\Hyper-Shop\\HyperShop\\HyperShop.csproj",
-      "projectName": "HyperShop",
-      "projectPath": "C:\\Users\\ThinkPro\\OneDrive\\Desktop\\Hyper-Shop\\HyperShop\\HyperShop.csproj",
+      "projectUniqueName": "C:\\Users\\ThinkPro\\OneDrive\\Desktop\\Hyper-Shop\\HyperShop\\HyperShop.Web.csproj",
+      "projectName": "HyperShop.Web",
+      "projectPath": "C:\\Users\\ThinkPro\\OneDrive\\Desktop\\Hyper-Shop\\HyperShop\\HyperShop.Web.csproj",
       "packagesPath": "C:\\Users\\ThinkPro\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ThinkPro\\OneDrive\\Desktop\\Hyper-Shop\\HyperShop\\obj\\",
       "projectStyle": "PackageReference",

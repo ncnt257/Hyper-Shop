@@ -1805,7 +1805,9 @@
       "HyperShop.DataAccess/1.0.0": {
         "dependencies": {
           "HyperShop.Models": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.12"
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12"
         },
         "runtime": {
           "HyperShop.DataAccess.dll": {}
