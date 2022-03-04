@@ -6,7 +6,6 @@ $(document).ready(function () {
         "columns": [
             { "data": "name", "width": "15%" },
             { "data": "price", "width": "15%" },
-
             { "data": "gender", "width": "15%" },]
     });
 });

@@ -22,5 +22,14 @@ namespace HyperShop.Models
         public string ClosureType { get; set; }
         [Display(Name = "Published Date")]
         public DateTime PublishedDate { get; set; } = DateTime.Now;
+        [Display(Name ="Image")]
+        public string PrimaryImage { get; set; }
+        [Display(Name = "Category")]
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+        [Display(Name = "Brand")]
+        public int BrandId { get; set; }
+        public Brand Brand { get; set; }
+
     }
 }
