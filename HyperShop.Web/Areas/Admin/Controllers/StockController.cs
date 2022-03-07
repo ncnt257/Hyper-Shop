@@ -33,16 +33,27 @@ namespace HyperShop.Web.Areas.Admin.Controllers
         public IActionResult Index(int productId)
         {
             if (productId == 0) return NotFound();
-            var stockList = _context.Stock
+            var stock = _context.Stock
                 .Where(s => s.ProductId == productId)
                 .Include(s => s.Color)
                 .ToList()
                 .GroupBy(s => new { s.ColorId, s.Color.ColorValue })
-                .Select(s => new Color
+                .Select(s => new ColorStock
                 {
                     Id = s.Key.ColorId,
-                    ColorValue = s.Key.ColorValue
+                    ColorValue = s.Key.ColorValue,
+                    
                 });
+            var stockList = stock.ToList();
+            for (int i = 0; i < stockList.Count; i++)
+            {
+                var img = _context.PrimaryImages.FirstOrDefault(pi => pi.ProductId == productId && pi.ColorId == stockList[i].Id);
+                if (img != null)
+                {
+                    stockList[i].Image = img.Url;
+                }
+
+            }
             var stockVM = new StockVM
             {
                 ProductId = productId,
@@ -157,20 +168,32 @@ namespace HyperShop.Web.Areas.Admin.Controllers
             return View(stockUpsertVM);
         }
 
-        // GET: Admin/Stock/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Admin/Stock/Edit?produtcId=8&&colorId=2
+        public IActionResult Edit(int productId, int colorId)
         {
-            if (id == null)
+            List<SizeQuantity> sizeQty = _context.Sizes.Select(s => new SizeQuantity
             {
-                return NotFound();
+                Size = s.SizeValue,
+                SizeId = s.Id,
+                     
+            }).ToList();
+
+            for(int i =0; i < sizeQty.Count; i++)
+            {
+                var qty = _context.Stock.FirstOrDefault(st => st.ProductId == productId && st.ColorId == colorId && st.SizeId == sizeQty[i].SizeId);
+                if (qty != null)
+                    sizeQty[i].Qty = qty.Quantity;
+
             }
 
-            var stock = await _context.Stock.FindAsync(id);
-            if (stock == null)
+            StockUpsertVM stockUpsertVM = new StockUpsertVM
             {
-                return NotFound();
-            }
-            return View(stock);
+                ProductId = productId,
+                SizeQty = sizeQty,
+                ColorId = colorId
+
+            };
+            return View(stockUpsertVM);
         }
 
         // POST: Admin/Stock/Edit/5
