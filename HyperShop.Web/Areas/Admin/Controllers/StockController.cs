@@ -182,7 +182,10 @@ namespace HyperShop.Web.Areas.Admin.Controllers
             {
                 var qty = _context.Stock.FirstOrDefault(st => st.ProductId == productId && st.ColorId == colorId && st.SizeId == sizeQty[i].SizeId);
                 if (qty != null)
+                {
                     sizeQty[i].Qty = qty.Quantity;
+                    sizeQty[i].StockId = qty.Id;
+                }
 
             }
 
@@ -201,34 +204,25 @@ namespace HyperShop.Web.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ProductId,SizeId,ColorId,Quantity")] Stock stock)
+        public IActionResult Edit(StockUpsertVM stockUpsertVM, IFormFile? primaryImg, List<IFormFile> secondaryImg)
         {
-            if (id != stock.Id)
+            List<Stock> stockQty = new();
+            foreach (var item in stockUpsertVM.SizeQty)
             {
-                return NotFound();
+                stockQty.Add(new Stock
+                {
+                    Id = item.StockId,
+                    SizeId = item.SizeId,
+                    Quantity = item.Qty,
+                    ColorId = stockUpsertVM.ColorId,
+                    ProductId = stockUpsertVM.ProductId,
+                });
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(stock);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!StockExists(stock.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(stock);
+
+            _context.Stock.UpdateRange(stockQty);
+            _context.SaveChanges();
+            return RedirectToAction("Index", new { productId = stockUpsertVM.ProductId });
         }
 
         // GET: Admin/Stock/Delete/5

@@ -14,6 +14,7 @@
 		<form method="post" class="row" asp-action="Edit" enctype="multipart/form-data">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<input asp-for="ProductId" hidden class="form-control" />
+			<input asp-for="ColorId" hidden class="form-control" />
 			<div class="form-group col-6">
 				<label asp-for="PrimaryImage"></label>
 				<input type="file" accept="image/png, image/jpg, image/jpeg" id="uploadBox" name="primaryImg" class="form-control " />
@@ -30,6 +31,8 @@
 				<tr >
 					<input asp-for="@Model.SizeQty[i].SizeId" hidden class="form-control" />
 					<input asp-for="@Model.SizeQty[i].Size" hidden class="form-control" />
+					<input asp-for="@Model.SizeQty[i].StockId" hidden class="form-control" />
+
 					<td><b>Size @Model.SizeQty[i].Size</b></td>
 					<td><input asp-for="@Model.SizeQty[i].Qty" type="number" class="form-control" /></td>
 				</tr>
