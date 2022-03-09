@@ -1347,7 +1347,8 @@
       },
       "HyperShop.Models/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.EntityFrameworkCore": "5.0.12"
         },
         "runtime": {
           "HyperShop.Models.dll": {}
