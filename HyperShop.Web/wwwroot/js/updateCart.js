@@ -35,6 +35,52 @@ $('.cart-item-delete').on('click', function (e) {
     })
 })
 
-$('.cart-form').on('submit', function () {
-
+$('.update-cart-btn').on('click', function (e) {
+    e.preventDefault
+    e.stopPropagation
+    form = $('.cart-form')
+    data = form.serialize()
+    url = $(this).attr('formaction')
+    $.ajax({
+        url,
+        data,
+        contentType: "application/json; charset=utf-8",
+        success: function (data) {
+            $('.cart-table-body').html(getCartTableBody(data))
+            $('.cart-total').text(getTotal(data))
+            
+        },
+        error: function (err) {
+            console.log(err)
+        }
+    })
 })
+
+function getCartTableBody(items) {
+    let res = ``;
+    for (item of items) {
+        res += `
+        <tr>
+            <td><a href="#"><img src="${item.productImage}" alt="${item.productName}"></a></td>
+            <td><a href="#">${item.productName}</a></td>
+            <td>${item.size}</td>
+            <td>
+            <input type="number" min="0" max="${item.stockQuantity}" name="${item.cartId}" value="${item.quantity}" class="form-control qty-input">
+            </td>
+            <td>${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(item.price)}</td>
+            <td>$0.00</td>
+            <td class = "item-total">${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format((item.price * item.quantity))}</td>
+            <td><a href="/Customer/Cart/DeleteItem" id="${item.CartId}" class="cart-item-delete"><i class="fa fa-trash-o"></i></a></td>
+        </tr>
+`
+    }
+    return res;
+}
+
+function getTotal(items) {
+    let total = 0;
+    for (item of items) {
+        total += item.price * item.quantity;
+    }
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format((total));
+}
