@@ -48,6 +48,7 @@ namespace HyperShop.Web.Areas.Customer.Controllers
                     Price = c.Stock.Product.Price,
                     Size = c.Stock.Size.SizeValue,
                     StockQuantity = c.Stock.Quantity,
+                    StockId = c.StockId
                 }).ToList();
                 return View(items);
             }
@@ -237,6 +238,7 @@ namespace HyperShop.Web.Areas.Customer.Controllers
                         Price = c.Stock.Product.Price,
                         Size = c.Stock.Size.SizeValue,
                         StockQuantity = c.Stock.Quantity,
+                        StockId = c.StockId
                     }).ToList();
                 return Ok(res);
             }
